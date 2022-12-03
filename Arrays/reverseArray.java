@@ -49,4 +49,35 @@
   
   
 **Third Approach(Recursive Approach)**  
+
+->We can also solve this approach in recursive way in in-place.
+  
+ import java.util.*;
+class Reverse {
+    public static void main(String[] args) {
+        int arr[] = {1, 4,5,2, 3};
+        reverseAnArray(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+        
+    }
+    public static void reverseAnArray(int [] arr,int start,int end){
+        if(start>=end){
+            return ;
+        }
+        else{
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            reverseAnArray(arr,start+1,end-1);
+        }
+    }
+}
+
+
+-> Time Complexity - o(n) 
+(Since you are looping through the entire array).
+-> Space Complexity - o(1)
+ (Since we did it in in-place). 
+  
+  
   
