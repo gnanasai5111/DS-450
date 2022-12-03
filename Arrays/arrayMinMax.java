@@ -23,4 +23,4 @@ class Reverse {
 }
 
 ->Time complexity - o(n)
-->Space complexity - o(n)
+->Space complexity - o(1)
