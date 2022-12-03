@@ -20,7 +20,7 @@
 -> Space Complexity - o(n)
  (Since we used the temporary array to store the result). 
   
-**Second Approach**
+**Second Approach(Iterative Approach)**
 
 ->We Can further optimise this code by not using the temorary array and doing in place shifting in array.
   
@@ -46,3 +46,7 @@
 (Since you are looping through the entire array).
 -> Space Complexity - o(1)
  (Since we did it in in-place). 
+  
+  
+**Third Approach(Recursive Approach)**  
+  
