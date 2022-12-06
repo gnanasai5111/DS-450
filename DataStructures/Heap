@@ -3,15 +3,20 @@
 Before getting to know about heap,you need to be aware of this terms.
 
 ->Array Representation of Binary Tree(fill level by level)
-.If a node is at index i,then its left child is (2*i) and right child is ((2*i)+1).
-.For a child node,if you want to find parent then it is (i/2).
+  -If a node is at index i,then its left child is (2*i) and right child is ((2*i)+1).
+  -For a child node,if you want to find parent then it is (i/2).
 
 ->Complete Binary Tree
-.If you represent binary tree in array then there shouldnt be any empty spaces or null values in the array then it is called complete binary tree.
-.A complete binary tree is a special type of binary tree where all the levels of the tree are filled completely except the lowest level nodes which 
- are filled from as left as possible.
+  -If you represent binary tree in array then there shouldnt be any empty spaces or null values in the array then it is called complete binary tree.
+  -A complete binary tree is a special type of binary tree where all the levels of the tree are filled completely except the lowest level nodes which 
+   are filled from as left as possible.
   
 ->Heap
+  -Heap is a complete binary tree.
+  -Two types:Max and Min Heap
+  -Max Heap:It is a complete binary tree and every node is having the element greater than or equal to all its descendants.
+  -Min Heap:It is a complete binary tree and every node is having the element smaller than or equal to all its descendants.
+
 ->Insert and Delete
 ->Heap Sort
 ->Heapify
