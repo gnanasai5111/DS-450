@@ -17,7 +17,19 @@ Before getting to know about heap,you need to be aware of this terms.
   -Max Heap:It is a complete binary tree and every node is having the element greater than or equal to all its descendants.
   -Min Heap:It is a complete binary tree and every node is having the element smaller than or equal to all its descendants.
 
-->Insert and Delete
+->Insert(adjustment is done from leaf to root) and Delete(adjustment is done from root to leaf)
+  -For inserting a value,insert at the end of the array ,and compare the value with parent and swaps the element if the value is greater than the parent for
+   max heap and swaps the lement if the value is lesser than the parent for min heap.(Time complexity-o(1) to o(logn))
+  -For Deleting ,we always delete the root node and after deleting we move the last array element to root and then we compare the root childs to see which is 
+   greater for max heap and which is lesser for min heap,after getting the child value,we compare it with the parent ,for max heap if the child node is greater
+   than the parent then swap and for min heap if the child node is lesser than the parent them swap.Repeat this procedure till all the elements are in correct
+   position.(Time complexity - o(logn))
+   
 ->Heap Sort
-->Heapify
+ -create a heap(o(nlogn)) and delete all the elements from the heap(o(nlogn)).
+ 
+->Heapify(right to left and direction is from leaf to root)-o(n)
+
 ->Priority Queue
+ -for min heap,the smaller the number more the priority and for min heap,the larger the element more the priority.
+ 
