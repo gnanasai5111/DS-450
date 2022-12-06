@@ -30,6 +30,6 @@ Before getting to know about heap,you need to be aware of this terms.
  
 ->Heapify(right to left and direction is from leaf to root)-o(n)
 
-->Priority Queue
+->Priority Queue(insert and delete-o(n))
  -for min heap,the smaller the number more the priority and for min heap,the larger the element more the priority.
  
