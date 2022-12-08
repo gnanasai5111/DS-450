@@ -55,6 +55,8 @@ Before getting to know about heap,you need to be aware of this terms.
  -create a heap(o(nlogn)) and delete all the elements from the heap(o(nlogn)).
  
 ->Heapify(right to left and direction is from leaf to root)-o(n)
+  -You start with leaf node and go till to root.firstly since leaf nodes doesnt have any child nodes you can ignore them.when you get into any non leaf node
+    then check for the descendant elements and see which is greater/lesser for max/min heap and swap if neccesarry.
 
 ->Priority Queue(insert and delete-o(n))
  -for min heap,the smaller the number more the priority and for min heap,the larger the element more the priority.
