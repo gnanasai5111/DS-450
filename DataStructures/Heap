@@ -46,7 +46,7 @@ Before getting to know about heap,you need to be aware of this terms.
       public static int getParentIndex(int index){
           return index%2==0?(index-1)/2:index/2;
       }
-  }                                                                //  overall - o(nlogn)
+  }                                                                //  overall - o(nlogn)  o/p-[17, 15, 10, 8, 13, 3, 6, 1, 5, 4, 9]
   
   The code written runs in o(nlogn) time complexity.Its a top down approach and runs by inserting element from root.When we insert a new element to the parent
   then we compare the newly inserted child element to the ancestors amd swap them to form a max/min heap.
