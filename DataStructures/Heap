@@ -25,7 +25,7 @@ Before getting to know about heap,you need to be aware of this terms.
    than the parent then swap and for min heap if the child node is lesser than the parent them swap.Repeat this procedure till all the elements are in correct
    position.(Time complexity - o(logn))
    
- ->Building an Heap(naive approach)
+ ->Building an Heap(naive approach-topdown)
  
   class HeapBuild {
       public static void main(String[] args) {
