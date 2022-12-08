@@ -25,6 +25,32 @@ Before getting to know about heap,you need to be aware of this terms.
    than the parent then swap and for min heap if the child node is lesser than the parent them swap.Repeat this procedure till all the elements are in correct
    position.(Time complexity - o(logn))
    
+ ->Building an Heap(naive approach)
+ 
+  class HeapBuild {
+      public static void main(String[] args) {
+          int a[] = {1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17};
+        for(int i=0;i<a.length;i++){
+            rearrange(a,i);
+        } 
+         System.out.println(Arrays.toString(a));   
+      }
+      public static void rearrange(int a[],int index){
+          while(index>0 && a[index]>a[getParentIndex(index)]){
+              int temp=a[index];
+              a[index]=a[getParentIndex(index)];
+              a[getParentIndex(index)]=temp;
+              index=getParentIndex(index);
+          }
+      }
+      public static int getParentIndex(int index){
+          return index%2==0?(index-1)/2:index/2;
+      }
+  }
+  
+  The code written runs in o(nlogn) time complexity.Its a top down approach and runs by inserting element from root.When we insert a new element to the parent
+  then we compare the newly inserted child element to the ancestors amd swap them to form a max/min heap.
+   
 ->Heap Sort
  -create a heap(o(nlogn)) and delete all the elements from the heap(o(nlogn)).
  
