@@ -27,28 +27,23 @@ Before getting to know about heap,you need to be aware of this terms.
    
  ->Building an Heap(naive approach-left to right -bottom up)
  
-  class HeapBuild {
-      public static void main(String[] args) {
-          int a[] = {1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17};
-        for(int i=0;i<a.length;i++){                              //   o(n) since its looping entire array
-            rearrange(a,i);  
-        } 
-         System.out.println(Arrays.toString(a));   
-      }
-      public static void rearrange(int a[],int index){            //   o(logn) since we compare the index with its ancestors.
-          while(index>0 && a[index]>a[getParentIndex(index)]){
-              int temp=a[index];
-              a[index]=a[getParentIndex(index)];
-              a[getParentIndex(index)]=temp;
-              index=getParentIndex(index);
-          }
-      }
-      public static int getParentIndex(int index){
-          return index%2==0?(index-1)/2:index/2;
-      }
-  }                                                                //  overall - o(nlogn)  o/p-[17, 15, 10, 8, 13, 3, 6, 1, 5, 4, 9]
+class HeapBuild {
+    public static void main(String[] args) {
+       int a[]= {1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17};
+       for(int i=0;i<a.length;i++){                                         //  loop will run for n times-o(n)
+           int j=i;                                               
+           while(j>0 && a[j]>a[j%2==0?(j-1)/2:j/2]){                        // comaring the element with parent and swapping - o(logn)
+                 int temp=a[j];
+                 a[j]=a[j%2==0?(j-1)/2:j/2];
+                 a[j%2==0?(j-1)/2:j/2]=temp;
+                 j=j%2==0?(j-1)/2:j/2;
+           }          
+       }
+      System.out.println(Arrays.toString(a));                             //   overall -o(nlogn)
+    }
+}
   
-  The code written runs in o(nlogn) time complexity.Its a top down approach and runs by inserting element from root.When we insert a new element to the parent
+  The code written runs in o(nlogn) time complexity.Its a bottom up approach and runs by inserting element from root.When we insert a new element to the parent
   then we compare the newly inserted child element to the ancestors amd swap them to form a max/min heap.
    
 ->Heap Sort
