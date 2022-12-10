@@ -18,7 +18,7 @@ class Heapify {
         if(rightChildIndex< N && a[rightChildIndex]>a[largestIndex]){
             largestIndex=rightChildIndex;
         }
-        if(largestIndex>=0){
+        if(largestIndex>=0 && largestIndex != index){
             int temp=a[index];
             a[index]=a[largestIndex];
             a[largestIndex]=temp;
