@@ -20,12 +20,12 @@
   > In Java, class name should match with the file name and it should be in upper case letter.
   > The entry point of java programs is **main()** method and it is place where program starts its execution.
   > Java compiler or Java virtual machine looks for main() method when we execute the program
-  ->public is an Access modiflier and static is non access modifier ,you dont have to create an object to access static methods,You can 
-    directly access them and void is a keyword and it specifies method is not returning any value
-  ->String[] args  -It stores command line arguments
+  > public is an Access modiflier and static is non access modifier ,you dont have to create an object to access static methods,You can 
+    directly access them and void is a keyword and it specifies method is not returning any value.
+  > String[] args  -It stores command line arguments
     Ex:javac Main.java
     // java Main 1 2 3
-   ->System is a built-in class and that contains output to display and println() method to print on the screen.
+  > System is a built-in class and that contains output to display and println() method to print on the screen.
 
 ## Access Modifier
   
