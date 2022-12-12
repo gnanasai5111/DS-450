@@ -53,7 +53,7 @@
 
 ### Comments 
  - Single line ->   //
- - Multi line  -> /*...TEXT....*/
+ - Multi line  -> /**/
 
 ### Variables
 - variables are containers for storing values.
