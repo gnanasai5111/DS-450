@@ -85,7 +85,7 @@
  int myInt = (int) myDouble;
  ```
  
- **if-else
+ ### if-else
  
  ```
  if(condition){
@@ -133,5 +133,5 @@ for(initialisation;condition;inc/dec){
 - It is used to breal out of the loop.
 
 ### Continue
--It is used to skip the current interation in the loop.
+- It is used to skip the current interation in the loop.
   
