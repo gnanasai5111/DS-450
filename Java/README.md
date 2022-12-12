@@ -84,5 +84,40 @@
  double myDouble = 9.78d;
  int myInt = (int) myDouble;
  ```
+ 
+ **if-else
+ 
+ ```
+ if(condition){
+ ....
+ ....
+ }
+ else if(condition){
+ ...
+ ...
+ }
+ else{
+ ...
+ ...
+ }
+ ```
+ 
+ ### while
+ 
+ ```
+ while(condition){
+ ...
+ increment/decrement;
+ }
+```
+
+ ### do while
+ 
+ ```
+ while(condition){
+ ...
+ increment/decrement;
+ }
+```
 
   
