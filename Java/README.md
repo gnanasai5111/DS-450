@@ -7,9 +7,9 @@
 # Basic Syntax
  
  > Every Java code must me inside a class.
+ # Main.java
  
   ```
-  Main.java
   public class Main {
    public static void main(String[] args) {
     System.out.println("Hello World");
