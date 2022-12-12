@@ -28,3 +28,9 @@
   ### Modilfiers are of  2 types
   - Access Modifiers      ->Controls the access level.
   - Non Access Modifiers  ->Do not control the access level,but provides other functionality.
+
+  #### Access Modifiers
+  - **Private** ->It is accessible only within the class.
+  - **Public**  ->It is accessible within the class, outside the class, within the package, outside the page, basically everywhere.
+  - **Protected** ->It is accessible within the package and also outside of the package  only through child class.
+  - **Default** ->It is accessible within the package.
