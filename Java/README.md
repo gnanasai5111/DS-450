@@ -19,7 +19,7 @@
   ```
   > In Java, class name should match with the file name and it should be in upper case letter.
   > The entry point of java programs is **main()** method and it is place where program starts its execution.
-  > Java compiler or Java virtual machine looks for main() method when we execute the program
+  > Java compiler or Java virtual machine looks for main() method when we execute the program.
   > public is an Access modiflier and static is non access modifier ,you dont have to create an object to access static methods,You can 
     directly access them and void is a keyword and it specifies method is not returning any value.
   > String[] args  -It stores command line arguments
@@ -50,4 +50,16 @@
   - **Final** ->	Attributes and methods cannot be overridden/modified.
   - **Abstract** ->Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();.      and the body is provided by the subclass (inherited from). 
   - **Static** ->Attributes and methods belongs to the class, rather than an object.
+
+### Comments 
+ - Single line ->   //
+ - Multi line  -> /*...TEXT....*/
+
+### Variables
+- variables are containers for storing values.
+String - stores text, such as "Hello". String values are surrounded by double quotes
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+boolean - stores values with two states: true or false
   
