@@ -134,4 +134,21 @@ for(initialisation;condition;inc/dec){
 
 ### Continue
 - It is used to skip the current interation in the loop.
+
+### Switch
+
+```
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+
   
