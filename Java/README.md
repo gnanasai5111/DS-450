@@ -7,12 +7,18 @@
 # Basic Syntax
  
  > Every Java code must me inside a class.
+ 
  # Main.java
  
-  ```//
+  ```
   public class Main {
    public static void main(String[] args) {
     System.out.println("Hello World");
    }
   }
   ```
+  > In Java, class name should match with the file name and it should be in upper case letter.
+  > The entry point of java programs is **main()** method and it is place where program starts its execution.
+  > Java compiler or Java virtual machine looks for main() method when we execute the program
+
+# Access Modifier
