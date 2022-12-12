@@ -114,10 +114,24 @@
  ### do while
  
  ```
- while(condition){
+ do{
  ...
  increment/decrement;
- }
+ }while(condition);
+```
+-Difference between while and do while is,do while runs the code block once before checking the condition.
+
+### For loop
+
+```
+for(initialisation;condition;inc/dec){
+...
+}
 ```
 
+### Break
+- It is used to breal out of the loop.
+
+### Continue
+-It is used to skip the current interation in the loop.
   
