@@ -151,8 +151,8 @@ switch(expression) {
 ```
 
 ### Arrays
--They are used to store multiple values of same data type.
-**eg**- int[] nums={1,2,3,5,4},int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+- They are used to store multiple values of same data type.
+- **eg**- int[] nums={1,2,3,5,4},int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
 
 #### For each loop
 ```
