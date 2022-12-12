@@ -64,6 +64,25 @@
 - **boolean** - stores values with two states: true or false
 
 ### Data types
-- **Primitive data types** - includes byte, short, int, long, float, double, boolean and char
-- **Non-primitive data types** - such as String, Arrays and Classes (you will learn more about these in a later chapter)
+- **Primitive data types** - includes byte, short, int, long, float, double, boolean and charand it specifies the size and type of variable values
+- **Non-primitive data types** - such as String, Arrays, Interfaces and Classes.They are called reference types because they refer to objects.
+- A primitive type has always a value, while non-primitive types can be null.
+
+### Type casting
+ **Widening Casting (automatically)** - converting a smaller type to a larger type size
+ byte -> short -> char -> int -> long -> float -> double
+ 
+ ```
+  int myInt = 9;
+  double myDouble = myInt;
+  ```
+
+**Narrowing Casting (manually)** - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+
+```
+ double myDouble = 9.78d;
+ int myInt = (int) myDouble;
+ ```
+
   
