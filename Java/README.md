@@ -69,16 +69,16 @@
 - A primitive type has always a value, while non-primitive types can be null.
 
 ### Type casting
- **Widening Casting (automatically)** - converting a smaller type to a larger type size
- byte -> short -> char -> int -> long -> float -> double
+ **Widening Casting (automatically)** - converting a smaller type to a larger type size.
+ - byte -> short -> char -> int -> long -> float -> double
  
  ```
   int myInt = 9;
   double myDouble = myInt;
   ```
 
-**Narrowing Casting (manually)** - converting a larger type to a smaller size type
-double -> float -> long -> int -> char -> short -> byte
+**Narrowing Casting (manually)** - converting a larger type to a smaller size type.
+- double -> float -> long -> int -> char -> short -> byte
 
 ```
  double myDouble = 9.78d;
