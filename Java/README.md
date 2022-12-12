@@ -130,7 +130,7 @@ for(initialisation;condition;inc/dec){
 ```
 
 ### Break
-- It is used to breal out of the loop.
+- It is used to break out of the loop.
 
 ### Continue
 - It is used to skip the current interation in the loop.
