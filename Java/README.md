@@ -26,5 +26,5 @@
   >Access modilfiers are used to set access level to classes, attributes, methods and constructors.
   
   ### Modilfiers are of  2 types
-  - Access Modifiers
-  - Non Access Modifiers
+  - Access Modifiers      ->Controls the access level.
+  - Non Access Modifiers  ->Do not control the access level,but provides other functionality.
