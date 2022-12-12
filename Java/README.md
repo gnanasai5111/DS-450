@@ -34,3 +34,14 @@
   - **Public**  ->It is accessible within the class, outside the class, within the package, outside the page, basically everywhere.
   - **Protected** ->It is accessible within the package and also outside of the package  only through child class.
   - **Default** ->It is accessible within the package.
+  - 
+  #### Non Access Modifiers
+  ->For classes,you can use either final or abstract.
+  - **Final** ->It cannot be inherited by other classes.
+  - **Abstract** ->It cannot be used to create objects.To access an abstract class, it must be inherited from another class.
+  
+  ->For attributes and methods,
+  - **Final** ->	Attributes and methods cannot be overridden/modified.
+  - **Abstract** ->Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();.      and the body is provided by the subclass (inherited from). 
+  - **Static** ->Attributes and methods belongs to the class, rather than an object.
+  
