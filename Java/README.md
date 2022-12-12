@@ -62,4 +62,8 @@
 - **float** - stores floating point numbers, with decimals, such as 19.99 or -19.99
 - **char** - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
 - **boolean** - stores values with two states: true or false
+
+### Data types
+- **Primitive data types** - includes byte, short, int, long, float, double, boolean and char
+- **Non-primitive data types** - such as String, Arrays and Classes (you will learn more about these in a later chapter)
   
