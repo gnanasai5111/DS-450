@@ -171,6 +171,73 @@ add(2,4);    //Actual paramters/Arguments
 ```
 
 
+### Method overloading
+
+- Multiple methods can have same name but with different number,different type  of parameters and different return type.
+
+```
+int myMethod(int x)
+float myMethod(float x)
+double myMethod(double x, double y)
+```
+
+### Class and Objects
+
+- class is a template for objects, and an object is an instance of a class.
+- When the individual objects are created, they inherit all the variables and  methods from the class.
+
+### Object creation
+-Specify the class name along with object name and use new operator and initialise the constructor.
+
+```
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+```
+
+### Constructor
+
+- A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
+
+
+### Encapsulation
+
+- It is process of hiding sensitive data from users.
+- It is process of binding data and methods together.
+
+**Ex** -
+
+```
+public Class Person{
+private String name="sai";
+
+public String getName(){
+return name;
+}
+public void setName(String newName){
+this.name=newName;
+}
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.name = "John";  // error
+    System.out.println(myObj.name); // error 
+    myObj.setName("John"); // Set the value of the name variable to "John"
+    System.out.println(myObj.getName());
+  }
+}
+
+```
+
+
+
 
 
 
