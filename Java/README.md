@@ -365,6 +365,7 @@ Level myVar = Level.MEDIUM;
 
 ### Java User Input (Scanner)
 - The Scanner class is used to get user input, and it is found in the java.util package.
+
 ```
  Scanner myObj = new Scanner(System.in);
 ```
@@ -372,6 +373,7 @@ Level myVar = Level.MEDIUM;
 ### ArrayList
 
 - Dynamic array(resizable array).
+- Elements in an ArrayList are actually objects.To specify the type we must use wrapper classes.
 
 ```
 import java.util.ArrayList; // import the ArrayList class
@@ -386,6 +388,111 @@ ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
 - set(index,value);
 - clear();
 - size();
+
+### Linkedlist
+
+-The LinkedList class has all of the same methods as the ArrayList class because they both implement the List interface.
+- Use an ArrayList for storing and accessing data, and LinkedList to manipulate data.
+
+**Extra methods**
+- addFirst();
+- addLast();
+- removeFirst();
+- removeLast();
+- getFirst();
+- getLast();
+
+### Hash Map(key-value pair)
+
+
+```
+import java.util.HashMap; // import the HashMap class
+
+HashMap<String, String> capitalCities = new HashMap<String, String>();
+```
+
+***Method***
+- put(key,value);
+- get(key);
+- remove(key);
+- clear();
+- size();
+- keySet();
+- values();
+- containsKey();
+
+
+### Hashset
+
+- A HashSet is a collection of items where every item is unique.
+
+```
+import java.util.HashSet; // Import the HashSet class
+
+HashSet<String> cars = new HashSet<String>();
+```
+
+**methods**
+-add();
+-contains();
+
+
+### Iterator
+
+An Iterator is an object that can be used to loop through collections.
+
+```
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+
+    // Make a collection
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+
+    // Get the iterator
+    Iterator<String> it = cars.iterator();
+
+    // Print the first item
+    System.out.println(it.next());
+  }
+}
+
+
+// looping through collection
+
+while(it.hasNext()) {
+  System.out.println(it.next());
+}
+
+remove elements -it.remove();
+```
+
+
+### Wrapper classes
+
+- Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.
+
+### Exceptions
+
+```
+try {
+  //  Block of code to try
+}
+catch(Exception e) {
+  //  Block of code to handle errors
+}
+finally{
+  // executed regardless of result
+}
+throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+
+```
 
 
 
