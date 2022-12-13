@@ -236,6 +236,124 @@ public class Main {
 
 ```
 
+### Packages
+
+- Package is used to group related classes.
+- Two types-Built-in and user defined packages.
+
+```
+import package.name.Class;   // Import a single class
+import package.name.*;   // Import the whole package
+
+package mypack;                            //creating a package
+class MyPackageClass {
+  public static void main(String[] args) {
+    System.out.println("This is my package!");
+  }
+}
+```
+
+### Inheritance(extends keyword)
+
+- Inheritance is the process of inheriting features from one class to other class.
+-  A class that inherits from another class can reuse the methods and fields of that class.
+
+**Sub class(child)** - class that inherits the other class
+**Super class(parent)**-  class whose features are inherited 
+
+
+### Polymorphism
+
+- Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+
+```
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+```
+
+
+### Inner classes
+ - It is possible to nest classes inside other classes.The purpose of nested classes is to group classes that belong together, which makes your code more        readable and maintainable.
+
+```
+class Outer{
+int x=10;
+class Inner{
+int y=10;
+}
+}
+
+class Main{
+public static void main(String [] args){
+Outer outObj=new Outer();
+Outer.Inner inObj=outObj.new Inner();
+}
+}
+
+```
+
+### Abstraction
+
+- Data abstraction is the process of hiding certain details and showing only essential information to the user.
+
+- **Abstract class**: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+- **Abstract method**: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+- An abstract class can have both abstract and regular methods:
+
+```
+abstract class Animal {
+  public abstract void animalSound();
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+```
+
+
+### Interfaces(implements)
+
+- Another way to achieve abstraction in Java, is with interfaces.
+- An interface is a completely "abstract class" that is used to group related methods with empty bodies
+- On implementation of an interface, you must override all of its methods
+
+```
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void run(); // interface method (does not have a body)
+}
+```
+
+
+
+
+
 
 
 
