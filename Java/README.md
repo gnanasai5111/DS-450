@@ -161,5 +161,17 @@ System.out.println(i);
 }
 ```
 
+### Parameters and Arguments
+
+```
+public static void add(int a,int b){   //Formal parameters/parameters
+System.out.println(a+b);
+}
+add(2,4);    //Actual paramters/Arguments
+```
+
+
+
+
 
   
