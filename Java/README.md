@@ -350,6 +350,45 @@ interface Animal {
 }
 ```
 
+### Enum
+
+- It is a special class,that represents a group of constants (unchangeable variables, like final variables).
+
+```
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+Level myVar = Level.MEDIUM;
+```
+
+### Java User Input (Scanner)
+- The Scanner class is used to get user input, and it is found in the java.util package.
+```
+ Scanner myObj = new Scanner(System.in);
+```
+
+### ArrayList
+
+- Dynamic array(resizable array).
+
+```
+import java.util.ArrayList; // import the ArrayList class
+
+ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
+```
+
+**Methods**
+- add(value);
+- get(index);
+- remove(index);
+- set(index,value);
+- clear();
+- size();
+
+
+
 
 
 
