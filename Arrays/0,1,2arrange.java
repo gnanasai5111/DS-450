@@ -35,6 +35,48 @@ class Arrange
 Time Complexity -o(3n)-o(n)
 space complexity -o(n)
                  
+We can optimise this approach by counting number of 0s,1s and 2s and storing them in array.
+class Arrange
+{
+    public static void Arrange(int a[], int n)
+    {
+     int count1=0;
+     int count2=0;
+     int count0=0;
+     for(int i=0;i<a.length;i++){
+         if(a[i]==0){
+         count0++;
+         }
+         else if(a[i]==1){
+             count1++;
+         }
+          else if(a[i]==2){
+             count2++;
+         }
+     }
+     int i=0;
+     while(count0>0){
+         a[i++]=0;
+         count0--;
+         
+     }
+      while(count1>0){
+         a[i++]=1;
+          count1--;
+         
+     }
+      while(count2>0){
+         a[i++]=2;
+          count2--;
+         
+     }
+        
+    }
+}
+                 
+Time Complexity -o(n)
+space complexity -o(1)
+                 
 Dutch National Flag alogorithm -(Three Pointer approach)
 
 Three pointers-Low,mid,high
