@@ -67,7 +67,7 @@ public class Hashing{
 
 - we will send a key as a input to hash function and it returns the bucket index.In that bucket index we will store the key-value pair if it not exists,if it   already exists ,then update the value.
 
-####Constructors in HashMap is as follows:
+#### Constructors in HashMap is as follows
 -> HashMap provides 4 constructors and the access modifier of each is public which are listed as follows:
 
 - HashMap();
@@ -79,9 +79,9 @@ public class Hashing{
 
 **Threshold** -product of Load Factor and Initial Capacity.
 
-Default Initial capacity-16
-Default load factor-0.75
-Threshold=16*0.75=12.
+- Default Initial capacity-16.
+- Default load factor-0.75.
+- Threshold=16*0.75=12.
 
 That is, Rehashing takes place after inserting 12 key-value pairs into the HashMap.
 
