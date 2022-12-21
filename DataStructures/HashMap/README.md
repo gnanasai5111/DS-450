@@ -87,3 +87,190 @@ That is, Rehashing takes place after inserting 12 key-value pairs into the HashM
 
 **Rehashing** – It is the process of doubling the capacity of the HashMap after it reaches its Threshold. 
 
+
+
+```
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Hashing {
+    
+     public static class Pair<K,V>{
+            K key;
+            V value;
+            public Pair(K key,V value){
+                this.key=key;
+                this.value=value;
+                
+            }
+    }
+    private static class HashMap<K,V>{
+       
+        public class Node{
+            K key;
+            V value;
+            public Node(K key,V value){
+                this.key=key;
+                this.value=value;
+                
+            }
+        }
+        private int N; //no of buckets
+        private int n; // no of nodes
+        private LinkedList<Node> buckets[]=new LinkedList[4];
+        public HashMap(){
+            this.N=4;
+            for(int i=0;i<4;i++){
+                buckets[i]=new LinkedList<>();
+            }
+        }
+        private int hashFunc(K key){
+            return Math.abs(key.hashCode())%N;
+        }
+        
+        private int searchInLL(K key,int bi){
+            LinkedList<Node> ll=buckets[bi];
+            
+            for(int i=0;i<ll.size();i++){
+                if(ll.get(i).key==key){
+                    return i;
+                }
+                
+            }
+          
+            return -1;
+        }
+        public void rehash(){
+            LinkedList<Node> oldbuckets[]=buckets;
+            buckets=new LinkedList[N*2];
+            N=N*2;
+            for(int i=0;i<oldbuckets.length;i++){
+                for(int j=0;j<oldbuckets[i].size();j++){
+                    put(oldbuckets[i].get(j).key,oldbuckets[i].get(j).value);
+                }
+            }
+            
+            
+        }
+        public void put(K key,V value){
+            int bi=hashFunc(key);
+            int ni=searchInLL(key,bi);
+            if(ni==-1){
+                Node node=new Node(key,value);
+                buckets[bi].add(node);
+                n++;
+            }
+            else{
+                Node node=buckets[bi].get(ni);
+                node.value=value;
+            }
+            double lamda=(double) n/N;
+            if(lamda>2.0){
+                rehash();
+            }
+            
+        }
+        
+        public V get(K key){
+            int bi=hashFunc(key);
+            int ni=searchInLL(key,bi);
+            if(ni==-1){
+               return null;
+            }
+            else{
+                Node node=buckets[bi].get(ni);
+                return node.value;
+            }
+            
+        }
+        
+        public V remove(K key){
+            int bi=hashFunc(key);
+            int ni=searchInLL(key,bi);
+            if(ni==-1){
+               return null;
+            }
+            else{
+                Node node=buckets[bi].remove(ni);
+                n--;
+                return node.value;
+            }
+            
+            
+        }
+         public boolean containsKey(K key){
+            int bi=hashFunc(key);
+            int ni=searchInLL(key,bi);
+            if(ni==-1){
+               return false;
+            }
+            else{
+               return true;
+            }
+            
+            
+        }
+        
+        public boolean isEmpty(){
+            return n==0;
+        }
+        public int size(){
+            return n;
+        }
+        
+        public ArrayList<K> keySet(){
+            ArrayList<K> keys=new ArrayList<>();
+            for(int i=0;i<buckets.length;i++){
+                for(int j=0;j<buckets[i].size();j++){
+                    keys.add(buckets[i].get(j).key);
+                }
+            }
+            return keys;
+            
+            
+        }
+        
+        public ArrayList<Pair> entrySet(){
+            ArrayList<Pair> entries=new ArrayList<>();
+             for(int i=0;i<buckets.length;i++){
+                for(int j=0;j<buckets[i].size();j++){
+                    Pair p=new Pair(buckets[i].get(j).key,buckets[i].get(j).value);
+                    entries.add(p);
+                }
+            }
+            return entries;
+            
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        map.put("India",100);
+        map.put("China",99);
+        map.put("Usa",20);
+        map.put("China",-10000);
+        ArrayList<String> keys=map.keySet();
+        for(String i:keys){
+            System.out.println(i+" "+map.get(i));
+        }
+        System.out.println(map.containsKey("Indiaaa"));
+         System.out.println(map.size());
+         System.out.println(map.remove("China"));
+           ArrayList<String> keys1=map.keySet();
+        for(String i:keys1){
+            System.out.println(i+" "+map.get(i));
+        }
+        
+        ArrayList<Pair> entries=map.entrySet();
+        for(Pair i:entries){
+            System.out.println(i.key+" "+i.value);
+        }
+       
+    }
+    
+}
+
+```
+
