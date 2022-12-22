@@ -86,7 +86,9 @@ class StackClass {
             if(isEmpty()){
                 return -1;
             }
-           return list.remove(list.size()-1);
+            int top=list.get(list.size()-1);
+            list.remove(list.size()-1)
+           return ;
         }
         public int peek(){
             if(isEmpty()){
