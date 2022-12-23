@@ -223,3 +223,61 @@ class QueueCode {
     }
 }
 ```
+
+
+### Queue using two stacks
+
+```
+class QueueCode {
+    public static class Queue{
+         Stack<Integer> s1=new Stack<>();
+         Stack<Integer> s2=new Stack<>();
+         
+         public  boolean isEmpty(){
+             return s1.size()==0;
+         }
+         public void add(int data){
+             while(!s1.isEmpty()){
+                 s2.push(s1.pop());
+             }
+             s1.push(data);
+             while(!s2.isEmpty()){
+                 s1.push(s2.pop());
+             }
+         }
+         public int remove(){
+             if(s1.isEmpty()){
+                 System.out.println("Empty Queue");
+                 return -1;
+             }
+             int res=s1.pop();
+             return res;
+         }
+          public int peek(){
+             if(s1.isEmpty()){
+                 System.out.println("Empty Queue");
+                 return -1;
+             }
+             int res=s1.peek();
+             return res;
+         }
+        }
+    
+    public static void main(String[] args) {
+      Queue q=new Queue();
+      q.add(10);
+      q.add(20);
+      q.add(30);
+      q.add(40);
+      q.add(50);
+      q.remove();
+      q.add(6);
+      q.remove();
+      while(!q.isEmpty()){
+          System.out.println(q.peek());
+          q.remove();
+          
+      }
+    }
+}
+```
