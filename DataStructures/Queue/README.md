@@ -14,7 +14,7 @@ Front - peek
 
 ***Implementation
 
-Arrays
+Arrays,arraylist and linkedlist
 
 
 ```
@@ -133,6 +133,80 @@ class QueueCode {
     }
     public static void main(String[] args) {
       CQueue q=new CQueue(6);
+      q.add(10);
+      q.add(20);
+      q.add(30);
+      q.add(40);
+      q.add(50);
+      q.remove();
+      q.add(6);
+      q.remove();
+      while(!q.isEmpty()){
+          System.out.println(q.peek());
+          q.remove();
+          
+      }
+    }
+}
+```
+
+
+##LinkedList
+
+```
+class QueueCode {
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            next=null;
+            
+        }
+    }
+    public static class Queue{
+         Node head=null;
+         Node tail=null;
+        public boolean isEmpty(){
+            return head==null && tail==null;
+        }
+      
+        public void add(int data){
+            Node node=new Node(data);
+            if(tail==null){
+              tail=node;
+              head=node;
+              return ;
+            }
+            else{
+              tail.next=node;
+              tail=node;   
+            }
+           
+          
+        }
+         public int remove(){
+              if(isEmpty()){
+                System.out.println("Empty Queue");
+                return -1;
+            }
+           int front=head.data;
+           if(head==tail){
+               tail=null;
+           }
+           head=head.next;
+           return head.data;
+        }
+          public int peek(){
+            if(isEmpty()){
+                System.out.println("Empty Queue");
+                return -1;
+            }
+           return head.data;
+        }
+    }
+    public static void main(String[] args) {
+      Queue q=new Queue();
       q.add(10);
       q.add(20);
       q.add(30);
