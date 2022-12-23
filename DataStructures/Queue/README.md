@@ -1,0 +1,151 @@
+- It is an ordered list of objects, where insertion of elements occurs at the end of the list(rear), and removal of elements occur 
+  at the beginning of the list(front).
+- It follows First in first out structure(FIFO)
+
+
+**Operation 
+
+```
+
+Enque - add
+Dequeue - remove
+Front - peek 
+```
+
+***Implementation
+
+Arrays
+
+
+```
+class QueueCode {
+    public static class Queue{
+        int a[];
+        int size;
+        int rear=-1;
+        public Queue(int size){
+            a=new int[size];
+            this.size=size;
+        }
+        public boolean isEmpty(){
+            return rear==-1;
+        }
+        public void add(int data){
+            if(rear==size-1){
+                System.out.println("Full Queue");
+                return ;
+            }
+            rear++;
+            a[rear]=data;
+        }
+         public int remove(){
+            if(rear==-1){
+                System.out.println("Empty Queue");
+                return -1 ;
+            }
+            int top=a[0];
+            for(int i=0;i<rear;i++){
+                a[i]=a[i+1];
+            }
+            rear--;
+            return top;
+        }
+          public int peek(){
+            if(rear==-1){
+                System.out.println("Empty Queue");
+                return -1;
+            }
+           return a[0];
+        }
+    }
+    public static void main(String[] args) {
+      Queue q=new Queue(5);
+      q.add(10);
+      q.add(20);
+      q.add(30);
+      q.remove();
+      while(!q.isEmpty()){
+          System.out.println(q.peek());
+          q.remove();
+          
+      }
+    }
+}
+```
+
+*** Circular queue
+
+A circular queue is the extended version of a regular queue where the last element is connected to the first element.
+Thus forming a circle-like structure.
+
+
+```
+class QueueCode {
+    public static class CQueue{
+        int a[];
+        int size;
+        int rear=-1;
+        int front=-1;
+        public CQueue(int size){
+            a=new int[size];
+            this.size=size;
+        }
+        public boolean isEmpty(){
+            return rear==-1 && front==-1;
+        }
+        public boolean isFull(){
+            return (rear+1)%size==front;
+        }
+        public void add(int data){
+            if(isFull()){
+                System.out.println("Full Queue");
+                return ;
+            }
+            if(front==-1){
+                front=0;
+            }
+            rear=(rear+1)%size;
+            a[rear]=data;
+        }
+         public int remove(){
+            if(isEmpty()){
+                System.out.println("Empty Queue");
+                return -1 ;
+            }
+            int top=a[front];
+            // single elemnt condition
+            if(rear==front){
+                rear=-1;
+                front=-1;
+            }
+            else{
+                front=(front +1)%size;
+            }
+            return top;
+        }
+          public int peek(){
+            if(isEmpty()){
+                System.out.println("Empty Queue");
+                return -1;
+            }
+           return a[front];
+        }
+    }
+    public static void main(String[] args) {
+      CQueue q=new CQueue(6);
+      q.add(10);
+      q.add(20);
+      q.add(30);
+      q.add(40);
+      q.add(50);
+      q.remove();
+      q.add(6);
+      q.remove();
+      while(!q.isEmpty()){
+          System.out.println(q.peek());
+          q.remove();
+          
+      }
+    }
+}
+```
