@@ -41,3 +41,34 @@ class SubSequences {
        
     }
 }
+
+// print all subsequences whose sum is equal to given sum.
+
+
+class HelloWorld {
+    public static void subSum(ArrayList<Integer> res,int idx,int sum,ArrayList<Integer> sub,int tempSum){
+        
+        if(res.size()==idx){
+        if(tempSum==sum){
+           System.out.println(sub); 
+        }
+            return ;
+        }
+        sub.add(res.get(idx));
+        tempSum=tempSum+res.get(idx);
+        subSum(res,idx+1,sum,sub,tempSum);
+        tempSum=tempSum-res.get(idx);
+        sub.remove(res.get(idx));
+        subSum(res,idx+1,sum,sub,tempSum);
+    }
+    public static void main(String[] args) {
+       ArrayList<Integer> res=new ArrayList<Integer>();
+       ArrayList<Integer> sub=new ArrayList<Integer>();
+       res.add(1);
+       res.add(2);
+       res.add(1);
+       int sum=2;
+       subSum(res,0,2,sub,0);
+       
+    }
+}
