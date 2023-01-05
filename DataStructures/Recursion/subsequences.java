@@ -111,3 +111,36 @@ class HelloWorld {
        
     }
 }
+
+
+// count no of subsequences whose sum is equal to the given sum
+
+import java.util.*;
+class HelloWorld {
+    public static int subSum(ArrayList<Integer> res,int idx,int sum,ArrayList<Integer> sub,int tempSum){
+        
+        if(res.size()==idx){
+        if(tempSum==sum){
+           return 1;
+        }
+            return 0;
+        }
+        sub.add(res.get(idx));
+        tempSum=tempSum+res.get(idx);
+        int l=subSum(res,idx+1,sum,sub,tempSum);
+        tempSum=tempSum-res.get(idx);
+        sub.remove(res.get(idx));
+        int r=subSum(res,idx+1,sum,sub,tempSum);
+        return l+r;
+    }
+    public static void main(String[] args) {
+       ArrayList<Integer> res=new ArrayList<Integer>();
+       ArrayList<Integer> sub=new ArrayList<Integer>();
+       res.add(1);
+       res.add(2);
+       res.add(1);
+       int sum=2;
+       System.out.println(subSum(res,0,2,sub,0));
+       
+    }
+}
