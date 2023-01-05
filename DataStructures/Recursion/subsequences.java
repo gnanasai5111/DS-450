@@ -72,3 +72,42 @@ class HelloWorld {
        
     }
 }
+
+
+
+// return the first subsequence whose sum is equal to given sum
+
+import java.util.*;
+class HelloWorld {
+    public static boolean subSum(ArrayList<Integer> res,int idx,int sum,ArrayList<Integer> sub,int tempSum){
+        
+        if(res.size()==idx){
+        if(tempSum==sum){
+           System.out.println(sub); 
+           return true;
+        }
+            return false;
+        }
+        sub.add(res.get(idx));
+        tempSum=tempSum+res.get(idx);
+        if(subSum(res,idx+1,sum,sub,tempSum)==true){
+            return true;
+        }
+        tempSum=tempSum-res.get(idx);
+        sub.remove(res.get(idx));
+        if(subSum(res,idx+1,sum,sub,tempSum)==true){
+            return true;
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+       ArrayList<Integer> res=new ArrayList<Integer>();
+       ArrayList<Integer> sub=new ArrayList<Integer>();
+       res.add(1);
+       res.add(2);
+       res.add(1);
+       int sum=2;
+       subSum(res,0,2,sub,0);
+       
+    }
+}
