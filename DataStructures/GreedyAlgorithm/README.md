@@ -6,10 +6,6 @@ optimal result.
 
 ## we can use Greedy alogorithm
 
-1. Greedy Choice Property
-If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, 
-the problem can be solved using a greedy approach. This property is called greedy choice property.
+1. Greedy Choice Property: If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.
 
-2. Optimal Substructure
-If the optimal overall solution to the problem corresponds to the optimal solution to its subproblems, then the problem can be solved using a 
-greedy approach. This property is called optimal substructure.
+2. Optimal Substructure: If the optimal overall solution to the problem corresponds to the optimal solution to its subproblems, then the problem can be solved using a greedy approach. This property is called optimal substructure.
