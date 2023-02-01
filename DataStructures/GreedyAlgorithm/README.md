@@ -4,7 +4,7 @@ optimal result.
 - It follows top down approach.
 
 
-## we can use Greedy alogorithm
+## when can we use Greedy alogorithm?
 
 1. Greedy Choice Property: If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.
 
